@@ -1,2 +1,3 @@
-a = 'WinfoBots'
-print(f'Hello {a}!')
+name = 'WinfoBots'
+print(f'Hello {name}!')
+print('Hello')
