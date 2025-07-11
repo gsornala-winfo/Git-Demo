@@ -1,1 +1,1 @@
-print('Hello WinfoBots')
+print('Hello WinfoBots!')
