@@ -1,1 +1,2 @@
-print('Hello WinfoBots!')
+a = 'WinfoBots'
+print(f'Hello {a}!')
