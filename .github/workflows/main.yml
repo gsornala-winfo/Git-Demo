@@ -1,6 +1,7 @@
 name: Git-Demo
 
-on: workflow-dispatch
+# on: workflow-dispatch
+on:
   push:
     branches: ["master"]
 
