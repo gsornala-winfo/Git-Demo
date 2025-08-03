@@ -1,6 +1,5 @@
 name: Git-Demo
 
-# on: workflow-dispatch
 on: workflow_dispatch
 
 permissions:
@@ -14,4 +13,5 @@ jobs:
     - name: Deploy to server
       run: |
         cd C:\Users\GouthamSornala\Downloads\Git-Deploy\_work\Git-Demo
-        git checkout tags/v1.1.3
+        git fetch --all
+        git checkout tags/v1.1.4

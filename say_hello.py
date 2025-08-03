@@ -1,3 +1,4 @@
+#v1.1.4
 import bcrypt
 
 # Hashing a password
