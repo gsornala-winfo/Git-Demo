@@ -1,0 +1,19 @@
+name: Git-Demo
+
+on: workflow-dispatch
+push:
+  branches: ["master"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+
+    steps:
+    -name: Delploy to server
+      run: |
+        cd C:\Users\GouthamSornala\Downloads\Git-Deploy\_work\WinfoBots
+        git pull origin master
+        
