@@ -1,10 +1,11 @@
 name: Git-Demo
 
-on: workflow_dispatch
-  inputs:
-    tag:
-      description: 'Release tag to deploy'
-      required: true
+on: 
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to deploy'
+        required: true
       # default: 'v1.1.4'
 
 permissions:
