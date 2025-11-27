@@ -1,6 +1,12 @@
 name: Git-Demo
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to deploy'
+        required: true
+      # default: 'v1.1.4'
 
 permissions:
   contents: read
@@ -10,8 +16,13 @@ jobs:
     runs-on: self-hosted
 
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.inputs.tag }}
     - name: Deploy to server
       run: |
+        echo "Deploying version ${{ github.event.inputs.tag }} to server"
         cd C:\Users\GouthamSornala\Downloads\Git-Deploy\_work\Git-Demo
         git fetch --all
-        git checkout tags/v1.1.4
+        git pull origin ${{ github.event.inputs.tag }}
