@@ -22,6 +22,7 @@ jobs:
         ref: ${{ github.event.inputs.tag }}
     - name: Deploy to server
       run: |
+        echo ${{env.ENVIRONMENT}}
         echo "Deploying version ${{ github.event.inputs.tag }} to server"
         cd C:\Users\GouthamSornala\Downloads\Git-Deploy\_work\Git-Demo
         git fetch --all
