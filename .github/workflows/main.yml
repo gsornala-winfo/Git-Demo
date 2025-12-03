@@ -22,9 +22,9 @@ jobs:
         ref: ${{ github.event.inputs.tag }}
     - name: Deploy to server
       run: |
-        echo "Environment: ${{env.ENVIRONMENT}}"
-        echo "Secret: ${{secrets.SECRET1}}"
-        echo ${{secrets.SECRET1}}
+        echo "Environment: ${{vars.ENVIRONMENT}}"
+        echo "Secret: ${{ secrets.SECRET1 }}"
+        # echo "${{secrets.SECRET1}}"
         echo "Deploying version ${{ github.event.inputs.tag }} to server"
         cd C:\Users\GouthamSornala\Downloads\Git-Deploy\_work\Git-Demo
         git fetch --all
